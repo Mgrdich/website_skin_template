@@ -18,7 +18,22 @@ const sass = gulpSass(dartSass);
 function style() {
     return gulp.src('./scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./main'))
+        .pipe(browserSync.stream())
+}
+
+/**
+ * @description compile scss into css
+ * TASKS
+ * 1. where is my scss
+ * 2. pass that file into js uglifier compiler
+ * 3. where do i save it
+ * 4. stream all browsers
+ * */
+function js() {
+    return gulp.src('./js/**/*.js')
+        .pipe(gulpUglify())
+        .pipe(gulp.dest('./main'))
         .pipe(browserSync.stream())
 }
 
@@ -35,9 +50,9 @@ function watch() {
     });
     gulp.watch('./scss/**/*.scss', style);
     gulp.watch('./*.html').on('change', browserSync.reload);
-    // TODO add the minify the js file
-    gulp.watch('./js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('./js/**/*.js', js);
 }
 
 exports.style = style;
 exports.watch = watch;
+exports.js = js;
