@@ -7,6 +7,9 @@ const gulpUglify = require('gulp-uglify');
 
 const sass = gulpSass(dartSass);
 
+// TODO import gulp babel for es6
+// TODO check the uglify thing for es6 syntax
+
 /**
  * @description compile scss into css
  * TASKS
