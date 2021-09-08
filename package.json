@@ -1,0 +1,9 @@
+{
+  "name": "website_skin_template",
+  "version": "1.0.0",
+  "description": "a general website template",
+  "main": "index.js",
+  "repository": "git@github.com:Mgrdich/website_skin_template.git",
+  "author": "Mgo <mgotm13@gmail.com>",
+  "license": "MIT"
+}
