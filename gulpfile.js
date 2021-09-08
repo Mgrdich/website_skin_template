@@ -19,7 +19,7 @@ const sass = gulpSass(dartSass);
  * 4. stream all browsers
  * */
 function style() {
-    return gulp.src('./scss/**/*.scss')
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./main'))
         .pipe(browserSync.stream())
@@ -34,7 +34,7 @@ function style() {
  * 4. stream all browsers
  * */
 function js() {
-    return gulp.src('./js/**/*.js')
+    return gulp.src('./src/js/**/*.js')
         .pipe(gulpUglify())
         .pipe(gulp.dest('./main'))
         .pipe(browserSync.stream())
@@ -51,9 +51,9 @@ function watch() {
             baseDir: './'
         }
     });
-    gulp.watch('./scss/**/*.scss', style);
+    gulp.watch('./src/scss/**/*.scss', style);
     gulp.watch('./*.html').on('change', browserSync.reload);
-    gulp.watch('./js/**/*.js', js);
+    gulp.watch('./src/js/**/*.js', js);
 }
 
 exports.style = style;
