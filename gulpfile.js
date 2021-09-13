@@ -50,17 +50,17 @@ function jsLibs() {
     let libs = [
         "jquery.min.js",
         "bootstrap.min.js",
-        "superfish.js",
-        "jquery.easing.js",
-        "wow.js",
-        "jquery.isotope.min.js",
-        "owl.carousel.min.js",
-        "jquery.magnific-popup.js",
-        "jflickrfeed.min.js",
-        "jquery.fitvids.js",
-        "jquery.fractionslider.min.js",
-        "jquery-ui-1.10.4.custom.min.js",
-        "SmoothScroll.js"
+        // "superfish.js",
+        // "jquery.easing.js",
+        // "wow.js",
+        // "jquery.isotope.min.js",
+        // "owl.carousel.min.js",
+        // "jquery.magnific-popup.js",
+        // "jflickrfeed.min.js",
+        // "jquery.fitvids.js",
+        // "jquery.fractionslider.min.js",
+        // "jquery-ui-1.10.4.custom.min.js",
+        // "SmoothScroll.js"
     ];
 
     let dir = "./libs/js/";
@@ -70,7 +70,7 @@ function jsLibs() {
        return item;
     });
 
-    return gulp.src(...libs)
+    return gulp.src(libs)
         .pipe(concat('libs.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./main/'))
