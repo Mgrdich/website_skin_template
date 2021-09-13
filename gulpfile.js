@@ -4,11 +4,10 @@ const dartSass = require('sass');
 const browserSync = require('browser-sync');
 const cleanCss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 
 const sass = gulpSass(dartSass);
 
-// TODO import gulp babel for es6
-// TODO check the uglify thing for es6 syntax
 
 /**
  * @description compile scss into css
@@ -42,6 +41,43 @@ function js() {
 }
 
 /**
+ * @description compile scss into css
+ * TASKS
+ * 1. where is my libs
+ * 2. compile them into a single file
+ * */
+function jsLibs() {
+    let libs = [
+        "jquery.min.js",
+        "bootstrap.min.js",
+        "superfish.js",
+        "jquery.easing.js",
+        "wow.js",
+        "jquery.isotope.min.js",
+        "owl.carousel.min.js",
+        "jquery.magnific-popup.js",
+        "jflickrfeed.min.js",
+        "jquery.fitvids.js",
+        "jquery.fractionslider.min.js",
+        "jquery-ui-1.10.4.custom.min.js",
+        "SmoothScroll.js"
+    ];
+
+    let dir = "./libs/js/";
+
+    libs = libs.map(function (item){
+       item = dir + item;
+       return item;
+    });
+
+    return gulp.src(...libs)
+        .pipe(concat('libs.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./main/'))
+        .pipe(browserSync.stream())
+}
+
+/**
  * @description watch for changes and run tasks
  * TASKS
  * 1. wathces both the scss and html files for changes
@@ -60,3 +96,4 @@ function watch() {
 exports.style = style;
 exports.watch = watch;
 exports.js = js;
+exports.jsLibs = jsLibs;
