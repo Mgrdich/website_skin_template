@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const gulpSass = require('gulp-sass');
 const dartSass = require('sass');
 const browserSync = require('browser-sync');
-const gulpCleanCss = require('gulp-clean-css');
-const gulpUglify = require('gulp-uglify');
+const cleanCss = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 
 const sass = gulpSass(dartSass);
 
@@ -21,6 +21,7 @@ const sass = gulpSass(dartSass);
 function style() {
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass())
+        .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('./main'))
         .pipe(browserSync.stream())
 }
@@ -35,7 +36,7 @@ function style() {
  * */
 function js() {
     return gulp.src('./src/js/**/*.js')
-        .pipe(gulpUglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./main'))
         .pipe(browserSync.stream())
 }
