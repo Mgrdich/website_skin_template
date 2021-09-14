@@ -50,8 +50,8 @@ function jsLibs() {
     let libs = [
         "jquery.min.js",
         "bootstrap.min.js",
-        // "superfish.js",
-        // "jquery.easing.js",
+        "superfish.js",
+        "jquery.easing.js",
         // "wow.js",
         // "jquery.isotope.min.js",
         // "owl.carousel.min.js",
@@ -71,7 +71,7 @@ function jsLibs() {
     });
 
     return gulp.src(libs)
-        .pipe(concat('libs.js'))
+        .pipe(concat('libs.js',{newLine:';'}))
         // .pipe(uglify())
         .pipe(gulp.dest('./main/'))
         .pipe(browserSync.stream())
