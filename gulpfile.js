@@ -72,7 +72,7 @@ function jsLibs() {
 
     return gulp.src(libs)
         .pipe(concat('libs.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('./main/'))
         .pipe(browserSync.stream())
 }
