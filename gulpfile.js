@@ -6,7 +6,15 @@ const cleanCss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
+const fs = require('fs');
+const {promisify} = require('util');
+const readFileAsync = promisify(fs.readFile)
+
 const sass = gulpSass(dartSass);
+
+async function asyncAwaitTask() {
+    return await readFileAsync('./libs/js/libs_order.json');
+}
 
 
 /**
@@ -47,6 +55,7 @@ function js() {
  * 2. compile them into a single file
  * */
 function jsLibs() {
+    // TODO delete which are easy to produce and unused
     let libs = [
         "jquery.min.js",
         "bootstrap.min.js",
@@ -65,13 +74,13 @@ function jsLibs() {
 
     let dir = "./libs/js/";
 
-    libs = libs.map(function (item){
-       item = dir + item;
-       return item;
+    libs = libs.map(function (item) {
+        item = dir + item;
+        return item;
     });
 
     return gulp.src(libs)
-        .pipe(concat('libs.js',{newLine:';'}))
+        .pipe(concat('libs.js', {newLine: ';'}))
         // .pipe(uglify())
         .pipe(gulp.dest('./main/'))
         .pipe(browserSync.stream())
