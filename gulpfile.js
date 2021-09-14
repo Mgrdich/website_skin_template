@@ -55,7 +55,6 @@ function js() {
  * 2. compile them into a single file
  * */
 function jsLibs() {
-    // TODO delete which are easy to produce and unused
     let libs = [
         "jquery.min.js",
         "bootstrap.min.js",
