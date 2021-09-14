@@ -67,8 +67,7 @@ function jsLibs() {
         "jflickrfeed.min.js",
         "jquery.fitvids.js",
         "jquery.fractionslider.min.js",
-        "jquery-ui-1.10.4.custom.min.js",
-        "SmoothScroll.js"
+        "jquery-ui-1.10.4.custom.min.js"
     ];
 
     let dir = "./libs/js/";
