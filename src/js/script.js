@@ -101,17 +101,6 @@
 
     $(document).ready(function() {
 
-
-        /******** Nav menu *******/
-
-       $('ul.sf-menu').superfish({
-            animation: {
-                height: 'show'
-            }, // slide-down effect without fade-in
-            delay: 100 // 1.2 second delay on mouseout
-        });
-
-
         /******** Header two menu button *******/
 
         $("#mobnav-btn").click(function() {

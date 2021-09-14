@@ -59,7 +59,6 @@ function jsLibs() {
     let libs = [
         "jquery.min.js",
         "bootstrap.min.js",
-        "superfish.js",
         "jquery.easing.js",
         "wow.js",
         "jquery.isotope.min.js",

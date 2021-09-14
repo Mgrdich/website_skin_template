@@ -4854,7 +4854,6 @@ input[type="submit"]:focus {
 }
 
 .price-range input {
-  display: inline-block;
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -4934,8 +4933,7 @@ input[type="submit"]:focus {
 .container-404-page .error-nav-menu {
   list-style: none;
   margin: 10px 0 0 0;
-  padding: 0;
-  padding-left: 15px;
+  padding: 0 0 0 15px;
 }
 
 .container-404-page .error-nav-menu li {
@@ -4968,7 +4966,7 @@ input[type="submit"]:focus {
 .flickr-thumbs li {
   list-style: none;
   float: left;
-  margin: 0px;
+  margin: 0;
   padding: 4px;
 }
 
@@ -4986,7 +4984,6 @@ input[type="submit"]:focus {
 
 #cycle {
   margin: 0;
-  padding: 0;
   width: 500px;
   height: 333px;
   padding: 3px;
@@ -6432,7 +6429,6 @@ screen and (max-height: 300px) {
 
 .fr-slider,
 .fr-slider-home2 {
-  position: relative;
   overflow: visible;
   position: relative;
   max-width: 1170px;
@@ -6462,7 +6458,6 @@ screen and (max-height: 300px) {
   padding: 0;
   outline: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -6477,10 +6472,9 @@ screen and (max-height: 300px) {
 }
 
 .fraction-slider .fs_obj {
-  display: block;
   display: none;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 100%;
   z-index: 7000;
 }
@@ -6493,8 +6487,8 @@ screen and (max-height: 300px) {
 .fraction-slider .fs_obj * {
   display: inline-block;
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 
 .slider .slide {
