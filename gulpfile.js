@@ -56,11 +56,11 @@ function jsLibs() {
         "jquery.isotope.min.js",
         "owl.carousel.min.js",
         "jquery.magnific-popup.js",
-        // "jflickrfeed.min.js",
-        // "jquery.fitvids.js",
-        // "jquery.fractionslider.min.js",
-        // "jquery-ui-1.10.4.custom.min.js",
-        // "SmoothScroll.js"
+        "jflickrfeed.min.js",
+        "jquery.fitvids.js",
+        "jquery.fractionslider.min.js",
+        "jquery-ui-1.10.4.custom.min.js",
+        "SmoothScroll.js"
     ];
 
     let dir = "./libs/js/";
