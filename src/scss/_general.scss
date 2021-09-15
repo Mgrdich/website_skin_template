@@ -342,10 +342,6 @@ a:focus {
 }
 
 
-/*=================================================
-2 - Header
-=================================================*/
-
 .header-inner {
   width: 100%;
   position: relative;
@@ -774,110 +770,6 @@ span.description {
 }
 
 
-/*Menu Style Two*/
-
-.menu-content {
-  background: #8a8f6a;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  color: #fff;
-  display: none;
-}
-
-.menu-content-wrap {
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-
-.menu-content ul.menu-nav {
-  width: 100%;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  list-style: none;
-}
-
-.menu-content ul.menu-nav li {
-  text-align: center;
-}
-
-.menu-content ul.menu-nav li a {
-  color: #fff;
-  text-align: center;
-  font-size: 34px;
-  line-height: 1.8em;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-right: 10px;
-}
-
-.menu-content ul.menu-nav ul {
-  float: none;
-  width: 100% !important;
-  list-style: none inside;
-  padding: 0;
-  margin: 0;
-  visibility: hidden;
-  max-height: 0;
-  filter: alpha(opacity=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  -webkit-opacity: 0;
-  -khtml-opacity: 0;
-  -moz-opacity: 0;
-  -ms-opacity: 0;
-  -o-opacity: 0;
-  opacity: 0;
-  -webkit-transition: max-height, 500ms, ease-in-out;
-  -khtml-transition: max-height, 500ms, ease-in-out;
-  -moz-transition: max-height, 500ms, ease-in-out;
-  -ms-transition: max-height, 500ms, ease-in-out;
-  -o-transition: max-height, 500ms, ease-in-out;
-  transition: max-height, 500ms, ease-in-out;
-}
-
-.menu-content ul.menu-nav .sub-menu-open {
-  max-height: 500px;
-  visibility: visible;
-  filter: alpha(opacity=100);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  -webkit-opacity: 1;
-  -khtml-opacity: 1;
-  -moz-opacity: 1;
-  -ms-opacity: 1;
-  -o-opacity: 1;
-  opacity: 1;
-}
-
-.menu-content ul.menu-nav ul li a {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.menu-content .sf-arrows .sf-with-ul {
-  padding: 0 !important;
-}
-
-.menu-content ul.menu-nav .mobnav-subarrow {
-  cursor: pointer;
-  display: inline;
-  position: relative;
-  top: -4px;
-}
-
-.menu-content ul.menu-nav li ul .mobnav-subarrow {
-  top: 0;
-}
-
-.menu-content ul.menu-nav .menu-search-bar .search-bar {
-  right: 0;
-  left: 0;
-}
-
 /*=================================================
 4 - Heading or Title
 =================================================*/
@@ -1034,59 +926,6 @@ span.description {
   }
 }
 
-
-/********* dual title *********/
-
-.dual-title-a {
-  margin-bottom: 0px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
-}
-
-.dual-title-b {
-  position: relative;
-  font-size: 24px;
-  margin-bottom: 40px;
-  font-weight: 500;
-  margin-top: 5px;
-  color: #8B8B8B;
-}
-
-.dual-title-b:after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: 0;
-  background: #ddd;
-  width: 50px;
-  height: 3px;
-  bottom: -18px;
-  font-size: 68px;
-  font-family: serif;
-  content: " ";
-}
-
-
-/********* line title *********/
-
-.btline-title {
-  padding-bottom: 17px;
-  position: relative;
-  margin-bottom: 32px;
-}
-
-.btline-title:after {
-  background: #8a8f6a;
-  content: " ";
-  display: block;
-  height: 3px;
-  width: 42px;
-  position: absolute;
-  bottom: -2px;
-  z-index: 999;
-}
 
 
 /********* Pull line title *********/
@@ -1518,79 +1357,6 @@ span.description {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
-
-/*=================================================
-7 - Team
-=================================================*/
-
-.container-our-team {
-  padding: 0 0 25px 0;
-}
-
-.container-team-home {
-  padding: 60px 0 25px 0;
-}
-
-.team-person {
-  margin-bottom: 55px;
-}
-
-.team-person .team-photo {
-  position: relative;
-  margin-bottom: 27px;
-  overflow: hidden;
-}
-
-.team-person .team-photo img {
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.team-person .team-info {
-  text-align: center;
-}
-
-.team-person .team-info .team-name {
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.team-person .team-info .team-role {
-  margin-bottom: 12px;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.team-person .et-icon {
-  font-size: 16px;
-  color: #7d7d7d;
-  margin: 0 6px;
-  padding: 0 6px;
-  display: inline-block;
-}
-
-.team-person .et-icon:hover {
-  color: #8a8f6a;
-}
-
-.team-person .team-photo .overlay {
-  background: #fff;
-}
-
-.team-person .team-photo:hover .overlay {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-}
-
 
 /*=================================================
 8 - Progress Bar
