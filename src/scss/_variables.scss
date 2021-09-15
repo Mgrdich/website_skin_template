@@ -2,8 +2,11 @@ $font_family: 'Josefin Sans', sans-serif;
 $main_color: #38312a;
 $secondary_color: #848019;
 
-$nav_color: $secondary_color;
-$nav_color_hover: rgba($secondary_color, .7);
+$nav_text_active_color: $secondary_color;
+$nav_text_active_color_hover: rgba($secondary_color, .7);
+$white_color:#ffffff;
 $white_color_hover: rgba(#ffffff, .7);
+
+$header_color: #38312a;
 
 $text_color: #333333;
