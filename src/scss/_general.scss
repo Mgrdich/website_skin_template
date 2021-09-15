@@ -2,7 +2,7 @@ body {
   font-family: $font_family;
   font-size: 13px;
   line-height: 24px;
-  color: #7d7d7d;
+  color: $text_color;
   font-weight: 400;
   letter-spacing: 0.06em;
   background-color: #fff;
@@ -317,7 +317,7 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover {
-  color: #8a8f6a;
+  color: $secondary_color;
 }
 
 a,
@@ -498,9 +498,8 @@ body.overflow-hidden-header-three {
   padding: 28px 24px;
   display: block;
   position: relative;
-  font-size: 16px;
-  font-family: Raleway, sans-serif;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: capitalize;
   color: $white_color;
@@ -536,7 +535,7 @@ body.overflow-hidden-header-three {
   z-index: 99;
   margin: 1px 0;
   padding: 3px 0 5px 0;
-  border-top: solid 3px #8a8f6a;
+  border-top: solid 3px $secondary_color;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
   box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
 }
@@ -552,7 +551,7 @@ body.overflow-hidden-header-three {
 
 .main-nav .sf-menu a:hover,
 .main-nav .sf-menu .sub-menu .sfHover a {
-  color: #8a8f6a;
+  color: $secondary_color;
 }
 
 .main-nav .sf-menu ul li {
@@ -585,7 +584,7 @@ body.overflow-hidden-header-three {
 }
 
 .main-nav .sf-menu ul ul li a:hover {
-  color: #8a8f6a !important;
+  color: $secondary_color !important;
 }
 
 
@@ -816,7 +815,7 @@ span.description {
 }
 
 .title-un-icon {
-  color: #8a8f6a;
+  color: $secondary_color;
   text-align: center;
   display: block;
   font-size: 30px;
@@ -881,7 +880,6 @@ span.description {
   text-align: center;
   width: 70%;
   margin: 20px auto 45px auto;
-  color:$white_color;
 }
 
 .title-un-des-two {
@@ -978,7 +976,7 @@ span.description {
 =================================================*/
 
 .button {
-  color: #8a8f6a;
+  color: $secondary_color;
   font-size: 11px;
   font-weight: 600;
   padding: 0 40px;
@@ -1006,15 +1004,15 @@ span.description {
 }
 
 .button:hover {
-  background-color: #8a8f6a;
+  background-color: $secondary_color;
   color: #fff;
-  border-color: #8A8F6A !important;
+  border-color: $secondary_color !important;
 }
 
 .green-button {
-  background-color: #8a8f6a;
+  background-color: $secondary_color;
   color: #fff;
-  border-color: #8A8F6A !important;
+  border-color: $secondary_color !important;
 }
 
 .button:hover {
@@ -1062,6 +1060,9 @@ span.description {
 
 .container-our-services {
   padding: 70px 0 70px 0;
+  .title-un-des {
+    font-size: 18px;
+  }
 }
 
 .services-box-margin {
@@ -1114,7 +1115,7 @@ span.description {
 
 .service-box-sb .service-icon {
   margin: 0 auto 18px;
-  color: #8a8f6a;
+  color: $main_color;
   text-align: center;
   font-size: 40px;
 }
@@ -1142,6 +1143,7 @@ span.description {
 .service-box-sb .service-info .desc {
   margin-top: 15px;
   font-size: 16px;
+  color: $text_color;
 }
 
 .service-box-sb .button {
@@ -1201,7 +1203,7 @@ span.description {
 
 .service-box-la .service-icon {
   line-height: 48px;
-  color: #8a8f6a;
+  color: $secondary_color;
   font-size: 34px;
   line-height: 48px;
   position: relative;
@@ -1228,7 +1230,7 @@ span.description {
 .see-more {
   text-align: center;
   display: inline-block;
-  color: #8a8f6a;
+  color: $secondary_color;
   font-size: 13px;
   margin-top: 10px;
   position: relative;
@@ -1243,11 +1245,11 @@ span.description {
 }
 
 .see-more:hover {
-  color: #8a8f6a;
+  color: $secondary_color;
 }
 
 .see-more .line {
-  background-color: #8a8f6a;
+  background-color: $secondary_color;
   width: 0;
   position: absolute;
   top: 96%;
@@ -1365,7 +1367,7 @@ span.description {
 .counter-box div.counter-number {
   font-size: 40px;
   line-height: 60px;
-  color: #fff;
+  color: $secondary_color;
   display: block;
   font-family: "Oswald", sans-serif;
   letter-spacing: 2px;
@@ -1424,7 +1426,7 @@ span.description {
 }
 
 .sq-progress-container .sq-progress .sq-progress-bar {
-  background: #8a8f6a;
+  background: $secondary_color;
   height: 100%;
   display: block;
   width: 50%;
@@ -1518,7 +1520,7 @@ button.close {
 }
 
 .nav-tabs > li > a:hover {
-  color: #8a8f6a;
+  color: $main_color;
 }
 
 .nav-tabs > li.active > a,
@@ -1527,7 +1529,7 @@ button.close {
   color: #555;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-top: solid 3px #8a8f6a;
+  border-top: solid 3px $main_color;
   border-bottom-color: transparent;
   cursor: default;
   font-weight: 700;
@@ -1804,6 +1806,13 @@ button.close {
 
 /****** Portfolio filter ******/
 
+.container-about-portfolio {
+  .title-un-des {
+    font-size: 18px;
+    color: $text_color;
+  }
+}
+
 .portfolio-container {
   padding: 46px 0;
 }
@@ -1826,7 +1835,6 @@ button.close {
 }
 
 .port-filter ul li a {
-  color: $white_color;
   padding: 9px 16px !important;
   text-align: center;
   -webkit-border-radius: 2px;
@@ -1843,7 +1851,7 @@ button.close {
 }
 
 .port-filter ul li.active a {
-  border: solid 1px #ececec;
+  border: solid 1px $secondary_color;
 }
 
 
@@ -1954,12 +1962,12 @@ button.close {
 .testimonial-rating {
   margin: 15px 0 15px 0;
   font-size: 16px;
-  color: #8a8f6a;
+  color: $main_color;
 }
 
 blockquote {
   padding: 4px 0 4px 23px;
-  border-left: 3px solid #8a8f6a;
+  border-left: 3px solid $main_color;
   margin: 35px 0;
   font-style: italic;
   font-size: 13px;
@@ -2145,7 +2153,7 @@ textarea {
 }
 
 .nav-btn a:hover {
-  color: #8a8f6a;
+  color: $main_color;
 }
 
 .nav-btn .next-post {
@@ -2700,8 +2708,8 @@ input[type="submit"]:focus {
   filter: Alpha(Opacity=100);
   /*IE7 fix*/
   opacity: 1;
-  background: #8a8f6a;
-  border-color: #8a8f6a;
+  background: $main_color;
+  border-color: $main_color;
 }
 
 
