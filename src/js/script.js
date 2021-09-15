@@ -37,10 +37,14 @@
         var $container = jQuery('.portfolio');
         $container.isotope({
             filter: '*',
+            layoutMode:'masonry',
             animationOptions: {
                 duration: 750,
                 easing: 'linear',
                 queue: false,
+            },
+            masonry: {
+                columnWidth: 400
             }
         });
         jQuery('.port-filter li a').click(function() {
