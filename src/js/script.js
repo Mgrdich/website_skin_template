@@ -2,10 +2,6 @@
 (function($) {
     "use strict"; // Start of use strict
 
-    /* ---------------------------------------------
-     Scripts initialization
-     --------------------------------------------- */
-
     $(window).load(function() {
 
         /******** Page loader *******/
@@ -13,25 +9,9 @@
         $(".page-loader").delay(200).fadeOut("slow");
 
 
-        /******** fractionSlider *******/
-
-        $('.fr-slider').fractionSlider({
-            'fullWidth': true,
-            'slideTransition': 'fade',
-            'slideTransitionSpeed': 650,
-            'slideEndAnimation': false,
-            'controls': false,
-            'pager': true,
-            'speedOut': 2600,
-            'timeout': 6000,
-            'responsive': true,
-            'increase': true,
-            'dimensions': '1170 , 600',
-        });
-
         var viewportWidth = $(window).width();
         var colWidth = $(".fraction-slider").width();
-        var viewportHeight = $(window).height();
+
         var divideval = 2;
         var marginslidebg = (viewportWidth - colWidth) / divideval + 2;
 
@@ -117,17 +97,6 @@
             $(".search-bar").slideToggle("slow");
         });
 
-        // TODO can be deleted
-        $('.nav-button, .overlay-content-wrap').on('click', function() {
-            $('.nav-button').toggleClass("active");
-            $('.menu-content').fadeToggle();
-            $('.overlay-content-wrap').toggleClass("overlay-active");
-            $('body').toggleClass("overflow-hidden-header-three");
-
-            var height = $(window).height();
-            $(".menu-content-wrap").css('height', height);
-
-        });
 
         /******** Header on scroll *******/
 
@@ -193,49 +162,12 @@
             autoHeight: true,
         });
 
-        //owl slider
-        var owl = $("#owl-single-port");
-        owl.owlCarousel({
-            navigation: false, // Show next and prev buttons
-            slideSpeed: 1000,
-            autoPlay: 100000000,
-            paginationSpeed: 2000,
-            singleItem: true,
-            pagination: false,
-        });
-
-        // Custom Navigation Events
-        $(".next").click(function() {
-            owl.trigger('owl.next');
-        })
-        $(".prev").click(function() {
-            owl.trigger('owl.prev');
-        })
 
         function SetResizeContent() {
             var minheight = $(window).height();
             $(".full-screen").css({'min-height': minheight, 'height': minheight});
         }
         SetResizeContent();
-
-        // owl slider for client slide show
-        var owl = $("#client-list-slide");
-        owl.owlCarousel({
-            items: 5, //10 items above 1000px browser width
-            itemsDesktop: [1000, 5], //5 items between 1000px and 901px
-            itemsDesktopSmall: [900, 3], // betweem 900px and 601px
-            itemsTablet: [600, 2], //2 items between 600 and 0
-            pagination: false,
-            itemsMobile: true // itemsMobile disabled - inherit from itemsTablet option
-        });
-
-        // Custom Navigation Events
-        $(".next").click(function() {
-            owl.trigger('owl.next');
-        })
-        $(".prev").click(function() {
-            owl.trigger('owl.prev');
-        })
 
 
         /******** Flickr feed *******/

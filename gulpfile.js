@@ -63,7 +63,6 @@ function jsLibs() {
         "jquery.isotope.min.js",
         "owl.carousel.min.js",
         "jquery.magnific-popup.js",
-        "jflickrfeed.min.js",
         "jquery.fitvids.js",
         "jquery.fractionslider.min.js"
     ];
