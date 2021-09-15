@@ -43,9 +43,7 @@
                 easing: 'linear',
                 queue: false,
             },
-            masonry: {
-                columnWidth: 400
-            }
+            
         });
         jQuery('.port-filter li a').click(function() {
             jQuery('.port-filter li').removeClass('active');

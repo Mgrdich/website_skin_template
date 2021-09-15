@@ -1,0 +1,177 @@
+.classic-portfolio {
+  .project-item {
+    float: left;
+    max-width: 100%;
+  }
+  .col-2-portfolio {
+    margin: 0 -15px;
+  }
+  &.col-2-portfolio .project-item {
+    width: 50%;
+    padding: 4px 1% 32px 1%;
+  }
+
+  &.col-3-portfolio .project-item {
+    width: 33.3333333%;
+    padding: 1%;
+    float: left;
+    max-width: 100%;
+    margin: 0;
+  }
+  &.col-3-portfolio.masonry-portfolio .project-item {
+    width: 31.89999%;
+    margin: 0.7%;
+    float: left;
+    max-width: 100%;
+  }
+}
+
+.classic-portfolio.col-4-portfolio .project-item {
+  width: 25%;
+  padding: 1%;
+  margin:0;
+}
+
+.classic-portfolio.col-4-portfolio.masonry-portfolio .project-item {
+  width: 23%;
+  margin: 0.6%;
+}
+
+.classic-portfolio.col-4-portfolio .project-item .project-info h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 10px 0 13px 0;
+}
+
+.classic-portfolio.col-4-portfolio .overlay .actions li.project-details {
+  margin: 100% auto 0 auto;
+}
+
+.classic-portfolio.col-5-portfolio .project-item {
+  width: 20%;
+  padding: 0.5%;
+  margin: 0;
+}
+
+.classic-portfolio .project-item .project-image,
+.projects-view .project-b-item .project-image {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.classic-portfolio .project-item .project-image:hover .overlay {
+  opacity: 0.9;
+}
+
+.classic-portfolio .project-item .project-image .pbt {
+  color: #fff;
+  border: solid 2px #fff;
+  padding: 9px 10px;
+}
+
+.classic-portfolio .project-item .project-image:hover .overlay li {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.classic-portfolio .project-item .project-info {
+  margin-top: 25px;
+}
+
+.classic-portfolio .project-item .project-info h4 {
+  margin: 8px 0 15px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.classic-portfolio .project-item .project-info h5 {
+  margin: 10px 0 12px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.classic-portfolio .project-item .project-info h4 a,
+.classic-portfolio .project-item .project-info h5 a {
+  color: #5d5d5d;
+}
+
+.classic-portfolio .project-item .project-info h4 a:hover,
+.classic-portfolio .project-item .project-info h5 a:hover {
+  color: #a67c52;
+}
+
+.classic-portfolio .project-item .project-info .project-cat {
+  margin: 0 0 5px 0;
+  padding: 0;
+  list-style: none;
+  letter-spacing: 2px;
+  position: relative;
+  font-size: 12px;
+}
+
+.classic-portfolio .project-item .project-info .project-cat li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.classic-portfolio .project-item .project-info .project-cat li:first-child {
+  margin: 0 10px 0 0;
+}
+
+.classic-portfolio .project-item .project-info .project-cat li:after {
+  content: '/';
+  position: absolute;
+  margin: 0 5px;
+}
+
+.classic-portfolio .project-item .project-info .project-cat li:last-child:after {
+  content: '';
+}
+
+.classic-portfolio .project-item .project-info .project-cat a {
+  color: #555555;
+}
+
+.classic-portfolio .project-item .project-info .project-cat a:hover {
+  color: #a67c52;
+}
+
+.classic-portfolio .project-item .project-info p {
+  margin-bottom: 20px;
+}
+
+.gallery-portfolio {
+  width: 100%;
+  margin: 0 0 40px 0 !important;
+  position: relative;
+}
+
+.gallery-portfolio:before {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+.col-2-portfolio.gallery-portfolio .project-item {
+  width: 50%;
+  padding: 0.7%;
+  margin: 0;
+}
+
+.classic-portfolio.col-3-portfolio.gallery-portfolio {}
+
+.col-3-portfolio.gallery-portfolio .project-item {
+  width: 33.3333333%;
+  padding: 0.7%;
+  margin: 0;
+}
+
+.col-4-portfolio.gallery-portfolio .project-item {
+  width: 25%;
+  padding: 0.7%;
+  margin: 0 ;
+}
