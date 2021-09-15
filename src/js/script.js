@@ -117,6 +117,7 @@
             $(".search-bar").slideToggle("slow");
         });
 
+        // TODO can be deleted
         $('.nav-button, .overlay-content-wrap').on('click', function() {
             $('.nav-button').toggleClass("active");
             $('.menu-content').fadeToggle();
