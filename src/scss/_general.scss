@@ -1696,90 +1696,6 @@ button.close {
 }
 
 
-/*=================================================
-10 - Pricing table
-=================================================*/
-
-.pricing-table {
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-}
-
-.pricing-table ul {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  list-style: none;
-}
-
-.pricing-table ul li {
-  border-top: solid 1px #eee;
-  border-right: solid 1px #eee;
-  border-left: solid 1px #eee;
-  padding: 13px 0;
-  text-align: center;
-}
-
-.pricing-table ul li.plan-name {
-  padding: 20px 0;
-  font-weight: 600;
-  color: #555;
-  text-transform: uppercase;
-}
-
-.pricing-table ul li.plan-name.pro-color {
-  color: #8a8f6a;
-}
-
-.pricing-table ul li.plan-price {
-  font-size: 24px;
-  padding: 24px 0;
-  font-weight: 700;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.pricing-table ul li.plan-order {
-  padding: 21px 0;
-  text-transform: uppercase;
-  color: #8a8f6a;
-  font-weight: 600;
-}
-
-.pricing-table ul li.plan-order a {
-  color: #8a8f6a;
-}
-
-.pricing-table ul li.plan-order a:hover {
-  color: #444;
-}
-
-.pricing-table ul li:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  -moz-border-top-right-radius: 3px;
-  -moz-border-top-left-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-}
-
-.pricing-table ul li:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-bottom-right-radius: 3px;
-  -moz-border-bottom-left-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom: solid 1px #eee;
-}
-
-.pricing-table ul li:nth-child(even) {
-  background: #fff
-}
-
-.pricing-table ul li:nth-child(odd) {
-  background: #fff
-}
-
 
 /*=================================================
 11 - Tabs
@@ -1890,16 +1806,8 @@ button.close {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-;
 }
 
-.small-font-title {}
-
-.small-font-title h3 {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
 
 .big-font-title {
   margin-bottom: 20px;
