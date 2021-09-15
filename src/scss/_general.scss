@@ -3140,16 +3140,27 @@ input[type="submit"]:focus {
   background-image: url(../images/tm2.jpg);
   background-size: cover;
   background-position: bottom center;
+  h1 {
+    color: $white_color;
+    font-size: 40px;
+    margin-top: 15%;
+  }
 }
 
 @media (min-width: 768px) {
   #home {
     height: 500px;
+    h1 {
+      font-size: 50px
+    }
   }
 }
 
 @media (min-width: 1199px) {
   #home {
     height: 750px;
+    h1 {
+      font-size: 60px
+    }
   }
 }
