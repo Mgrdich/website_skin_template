@@ -43,7 +43,7 @@
                 easing: 'linear',
                 queue: false,
             },
-            
+
         });
         jQuery('.port-filter li a').click(function() {
             jQuery('.port-filter li').removeClass('active');
@@ -78,10 +78,6 @@
             function() {
                 $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
             });
-
-        $("#search-label").click(function() {
-            $(".search-bar").slideToggle("slow");
-        });
 
 
         /******** Header on scroll *******/
@@ -208,6 +204,7 @@
         $('.header-inner').css({
             "width": conterner_width,
         });
+        $(".sf-menu").show();
 
     });
 
