@@ -60,22 +60,6 @@
         });
         $container.isotope('layout');
 
-        /******** append Portfolio item on click *******/
-        $('.append-button').on('click', function() {
-            // create new item elements
-            var $item_height = $('.gallery-portfolio .project-item').height();
-            var $items = $('<div class="project-item  illustration" style="height:' + $item_height + 'px;"><div class="project-image"><img src="../images/gallery/i3.jpg" alt=""><div class="overlay"><div class="content-wrap"><div class="overlay-content"><h3><a href="../single-portfolio.html">WIDE GALLERY</a></h3> <ul class="entry-cat"> <li><a href="#">Motion </a></li> <li><a href="#">Photography</a></li></ul></div></div></div></div></div> <div class="project-item  illustration"><div class="project-image"><img src="../images/gallery/i8.jpg" alt=""><div class="overlay"><div class="content-wrap"><div class="overlay-content"><h3><a href="../single-portfolio.html">WIDE GALLERY</a></h3> <ul class="entry-cat"> <li><a href="#">Motion </a></li> <li><a href="#">Photography</a></li></ul></div></div></div></div></div> <div class="project-item  illustration"><div class="project-image"><img src="../images/gallery/i9.jpg" alt=""><div class="overlay"><div class="content-wrap"><div class="overlay-content"><h3><a href="../single-portfolio.html">WIDE GALLERY</a></h3> <ul class="entry-cat"> <li><a href="#">Motion </a></li> <li><a href="#">Photography</a></li></ul></div></div></div></div></div>');
-
-            // append items to grid
-            $container.append($items)
-                // add and lay out newly appended items
-                .isotope('appended', $items);
-
-            $(".append-button").remove(".append-button");
-            $container.isotope('layout');
-
-        });
-
     });
 
 
@@ -168,21 +152,6 @@
             $(".full-screen").css({'min-height': minheight, 'height': minheight});
         }
         SetResizeContent();
-
-
-        /******** Flickr feed *******/
-
-        $('#cbox').jflickrfeed({
-            limit: 6,
-            qstrings: {
-                id: '23588458@N00'
-            },
-            itemTemplate: '<li>' +
-                '<a href="{{image_b}}" title="{{title}}">' +
-                '<img src="{{image_q}}" alt="{{title}}" />' +
-                '</a>' +
-                '</li>'
-        });
 
 
         /********  FitVids.js *******/
