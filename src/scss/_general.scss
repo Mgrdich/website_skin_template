@@ -381,9 +381,8 @@ a:focus {
 }
 
 .header-table {
-  display: table;
   width: 100%;
-  table-layout: fixed;
+  display: flex;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
   transition: all 500ms;
@@ -431,16 +430,10 @@ a:focus {
   .brand,
   .header-inner .main-nav {
     width: 100%;
-    display: block;
   }
   .brand {
     text-align: center;
     margin: 40px auto 0;
-    width: 100px !important;
-    height: auto !important;
-  }
-  .brand img {
-    height: auto !important;
   }
 }
 
@@ -486,12 +479,8 @@ body.overflow-hidden-header-three {
   padding: 0;
   list-style: none;
   transition: display 0.5s ease-out;
-}
-
-.sf-menu {
-  &.open {
-    display: block;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .main-nav .sf-menu li {
@@ -551,9 +540,6 @@ body.overflow-hidden-header-three {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
 }
 
-.main-nav .sf-menu > li {
-  display: inline-block;
-}
 
 .main-nav .sf-menu a {
   display: block;
@@ -591,11 +577,11 @@ body.overflow-hidden-header-three {
 }
 
 .main-nav .sf-menu ul ul li a {
-  color: #696969 !important;
+  color: #696969;
 }
 
 .main-nav .sf-menu ul ul li a:hover {
-  color: $secondary_color !important;
+  color: $secondary_color;
 }
 
 
@@ -631,115 +617,6 @@ body.overflow-hidden-header-three {
 @media (min-width: 768px) {
   .header-inner #mobnav-btn {
     display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-brand {
-    display: block;
-  }
-  .navbar {
-    max-height: none;
-  }
-  .main-nav {
-    margin-top: 10px;
-    height: auto;
-  }
-  .sf-menu {
-    display: block;
-  }
-  .sf-menu > li {
-    float: none;
-  }
-  .sf-menu li a {
-    padding: 10px 13px;
-    font-weight: 400;
-  }
-  .sf-menu ul {
-    font-size: 14px;
-    display: block;
-    position: static !important;
-    border: 0;
-    box-shadow: 0 0 0 0;
-    -moz-box-shadow: 0 0 0 0;
-    -webkit-box-shadow: 0 0 0 0;
-  }
-}
-
-
-@media only screen and (max-width: 768px) {
-  .header-table {
-    display: block;
-  }
-
-  .header-inner .main-nav {
-    display: block;
-    margin: 0;
-  }
-
-  #mobnav-btn {
-    display: block;
-  }
-  .mobnav-subarrow {
-    display: block !important;
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 45px;
-    height: 42px;
-    border-left: 1px solid #e8e8e8;
-    text-align: center;
-    color: #777;
-    padding-top: 13px;
-  }
-  .main-nav {
-    text-align: left;
-    white-space: nowrap;
-    padding: 0;
-  }
-  .sf-menu {
-    display: none;
-  }
-  .main-nav .sf-menu {
-    margin: 0 -15px;
-  }
-  .main-nav .sf-menu > li {
-    font-size: 13px;
-    line-height: 16px;
-    display: block;
-  }
-  .main-nav .sf-menu li a {
-    padding: 13px 57px 13px 15px !important;
-    display: block;
-    position: relative;
-    background-color: transparent !important;
-  }
-  .main-nav .sf-menu ul {
-    border: none;
-    padding: 0;
-  }
-  .main-nav .sf-menu ul li {
-    width: 100%;
-    font-size: 13px;
-    line-height: 16px;
-    font-weight: 400;
-    position: relative;
-    border: none;
-    border-top: 1px solid #e8e8e8;
-  }
-  .main-nav .sf-menu ul li:first-child {
-  }
-  .sf-menu ul,
-  .sf-menu ul ul {
-    position: static;
-    display: none;
-  }
-  .sub-menu-open {
-    display: block !important;
-  }
-  .sf-arrows .sub-menu .sf-with-ul:after {
-    border: none;
   }
 }
 

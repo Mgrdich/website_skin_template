@@ -4,6 +4,7 @@
 
     $(window).load(function() {
 
+        var $body = $('body');
         var page_loader =  $(".page-loader");
         /******** Page loader *******/
         page_loader.find('div').fadeOut();
@@ -30,6 +31,11 @@
                 "max-width": viewportWidth,
                 "margin-left": "-" + marginslidebg + "px",
             });
+
+            if($body.width() < 768) {
+                $body.addClass('mobile');
+            }
+
 
             // add mobile check and remove the toggle icon
 
