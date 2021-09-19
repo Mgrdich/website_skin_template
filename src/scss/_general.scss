@@ -388,11 +388,6 @@ a:focus {
   transition: all 500ms;
 }
 
-.brand,
-.header-inner .main-nav {
-  display: table-cell;
-  vertical-align: middle;
-}
 
 .header-scroll-fixed.sticky-menu {
   padding: 5px 100px 0 100px;
@@ -424,17 +419,6 @@ a:focus {
 .header-scroll-fixed .navbar-fixed-inner-container {
   width: 1170px;
   margin: 0 auto;
-}
-
-@media (max-width: 992px) and (min-width: 768px) {
-  .brand,
-  .header-inner .main-nav {
-    width: 100%;
-  }
-  .brand {
-    text-align: center;
-    margin: 40px auto 0;
-  }
 }
 
 /*** Header three menu **/
@@ -814,17 +798,6 @@ span.description {
   margin-left: 0;
 }
 
-@media (max-width: 650px) {
-  .title-un-icon:before {
-    width: 115px;
-    right: 180px;
-  }
-  .title-un-icon:after {
-    left: 180px;
-    width: 115px;
-  }
-}
-
 
 /********* Pull line title *********/
 
@@ -840,20 +813,6 @@ span.description {
 }
 
 
-/* Safari only */
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* Safari and Chrome */
-  .pline-title {
-    background-position-x: 50%;
-    background-position-y: 102%;
-  }
-  /* Safari only override */
-  .pline-title {
-    background-position-x: 50%;
-    background-position-y: 102%;
-  }
-}
 
 .plbottom-line {
   font-size: 14px;
@@ -2276,12 +2235,12 @@ input[type="submit"]:focus {
     padding: 0 13px;
   }
   .single-post-nav {
-    margin-top: 0 !important;
+    margin-top: 0;
   }
   .single-post-nav li,
   .nav-btn li {
     border-top: none;
-    width: 100% !important;
+    width: 100%;
   }
   .single-product-images {
   }
