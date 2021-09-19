@@ -4,9 +4,10 @@
 
     $(window).load(function() {
 
+        var page_loader =  $(".page-loader");
         /******** Page loader *******/
-        $(".page-loader div").fadeOut();
-        $(".page-loader").delay(200).fadeOut("slow");
+        page_loader.find('div').fadeOut();
+        page_loader.delay(200).fadeOut("slow");
 
         var slide_bg = $(".slide-bg")
         var viewportWidth = $(window).width();
@@ -29,6 +30,8 @@
                 "max-width": viewportWidth,
                 "margin-left": "-" + marginslidebg + "px",
             });
+
+            // add mobile check and remove the toggle icon
 
         });
 
@@ -71,26 +74,19 @@
         /******** Header two menu button *******/
 
         $("#mobnav-btn").click(function() {
-            $(".sf-menu").slideToggle("slow");
+            $(".sf-menu").toggleClass('open');
+            $(this).parents('.header-inner').addClass('mobile');
         });
 
-        $('.mobnav-subarrow').click(
-
-            function() {
+        $('.mobnav-subarrow').click(function() {
                 $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
-            });
+        });
 
 
         /******** Header on scroll *******/
 
             // Hide Header on on scroll down
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5;
         var header_inner = $('.header-inner');
-        var navbarHeight = header_inner.outerHeight();
-
-
 
         /******** OWL Slider *******/
 
@@ -140,6 +136,7 @@
         });
 
 
+        /********  Video *******/
         var play_video_trigger = $('.video-play-trigger');
         // For video popup (PLAY VIDEO TRIGGER)
         if (play_video_trigger.length) {
@@ -156,20 +153,6 @@
 
 
     });
-
-
-
-    $(window).resize(function() {
-        // TODO adding debounce functionality
-        /******** Header size *******/
-        var container_width = $('.inner-container').width();
-        $('.header-inner').css({
-            "width": container_width,
-        });
-        $(".sf-menu").show();
-
-    });
-
 
 
     /********  wow.js *******/
