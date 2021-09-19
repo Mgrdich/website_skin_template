@@ -234,7 +234,7 @@ body {
   }
 }
 
-.inner-conterner {
+.inner-container {
   background-color: #fff;
 }
 
@@ -345,11 +345,11 @@ a:focus {
 
 .header-inner {
   width: 100%;
-  position: relative;
+  position: fixed;
   z-index: 999;
   background-color: $header_color;
-
-
+  top: 0;
+  height: $header_height;
 }
 
 .header-inner.header-scroll-up {
@@ -1036,11 +1036,13 @@ span.description {
 .container-newsletter {
   background: $white_color;
   padding: 60px 0 60px 0;
+
   .title-un-des {
     color: $secondary_color;
     font-size: 16px;
   }
 }
+
 #gallery {
   background: $white_color;
 }
@@ -1061,6 +1063,7 @@ span.description {
 
 .container-our-services {
   padding: 70px 0 70px 0;
+
   .title-un-des {
     font-size: 18px;
   }
@@ -2268,6 +2271,7 @@ input[type="submit"]:focus {
 
 .footer-holder .site-footer {
   padding: 30px 0 30px 0;
+
   .text {
     color: $white_color;
   }
@@ -2309,8 +2313,10 @@ input[type="submit"]:focus {
     padding: 0;
     text-align: right;
   }
+
   a {
     color: $white_color;
+
     &:hover {
       color: $white_color_hover;
     }
@@ -3135,11 +3141,14 @@ input[type="submit"]:focus {
 .white-color {
   color: #fff;
 }
+
 #home {
   height: 300px;
   background-image: url(../images/tm2.jpg);
   background-size: cover;
   background-position: bottom center;
+  margin-top: $header_height;
+
   h1 {
     color: $white_color;
     font-size: 40px;
@@ -3150,6 +3159,7 @@ input[type="submit"]:focus {
 @media (min-width: 768px) {
   #home {
     height: 500px;
+
     h1 {
       font-size: 50px
     }
@@ -3159,8 +3169,14 @@ input[type="submit"]:focus {
 @media (min-width: 1199px) {
   #home {
     height: 750px;
+
     h1 {
       font-size: 60px
     }
+  }
+}
+.gallery_page {
+  #gallery {
+    margin-top: $header_height;
   }
 }

@@ -8,22 +8,23 @@
         $(".page-loader div").fadeOut();
         $(".page-loader").delay(200).fadeOut("slow");
 
-
+        var slide_bg = $(".slide-bg")
         var viewportWidth = $(window).width();
         var colWidth = $(".fraction-slider").width();
 
         var divideval = 2;
         var marginslidebg = (viewportWidth - colWidth) / divideval + 2;
 
-        $(".slide-bg").css({
+        slide_bg.css({
             "width": viewportWidth,
             "max-width": viewportWidth,
             "margin-left": "-" + marginslidebg + "px",
         });
 
         $(window).resize(function() {
+            // TODO adding debounce functionality
             /******** fractionSlider bg image resize *******/
-            $(".slide-bg").css({
+            slide_bg.css({
                 "width": viewportWidth,
                 "max-width": viewportWidth,
                 "margin-left": "-" + marginslidebg + "px",
@@ -86,49 +87,8 @@
         var didScroll;
         var lastScrollTop = 0;
         var delta = 5;
-        var navbarHeight = $('.header-inner').outerHeight();
-
-        $(window).scroll(function(event) {
-            didScroll = true;
-        });
-
-        setInterval(function() {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 250);
-
-        function hasScrolled() {
-            var st = $(window).scrollTop();
-
-            var conterner_width = $('.inner-conterner').width();
-            // Make sure they scroll more than delta
-            if (Math.abs(lastScrollTop - st) <= delta)
-                return;
-
-            // If they scrolled down and are past the navbar, add class .nav-up.
-            // This is necessary so you never see what is "behind" the navbar.
-            if (st > lastScrollTop && st > navbarHeight) {
-                // Scroll Down
-                $('.header-inner').removeClass('header-scroll-fixed').addClass('header-scroll-up');
-            } else {
-                // Scroll Up
-                if (st + $(window).height() < $(document).height()) {
-
-                    $('.header-inner').removeClass('nav-up').addClass('header-scroll-fixed').css({
-                        "width": conterner_width,
-                    });
-
-                }
-            }
-
-            if (st < 50) {
-                $('.header-inner').removeClass('header-scroll-fixed').removeClass('header-scroll-up');
-            }
-
-            lastScrollTop = st;
-        }
+        var header_inner = $('.header-inner');
+        var navbarHeight = header_inner.outerHeight();
 
 
 
@@ -179,9 +139,11 @@
             }
         });
 
+
+        var play_video_trigger = $('.video-play-trigger');
         // For video popup (PLAY VIDEO TRIGGER)
-        if ($('.video-play-trigger').length) {
-            $('.video-play-trigger').magnificPopup({
+        if (play_video_trigger.length) {
+            play_video_trigger.magnificPopup({
                 disableOn: 700,
                 type: 'iframe',
                 mainClass: 'mfp-with-fade',
@@ -198,11 +160,11 @@
 
 
     $(window).resize(function() {
-
+        // TODO adding debounce functionality
         /******** Header size *******/
-        var conterner_width = $('.inner-conterner').width();
+        var container_width = $('.inner-container').width();
         $('.header-inner').css({
-            "width": conterner_width,
+            "width": container_width,
         });
         $(".sf-menu").show();
 
