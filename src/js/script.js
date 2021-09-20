@@ -1,12 +1,12 @@
-(function($) {
+(function ($) {
     "use strict"; // Start of use strict
 
-    $(window).load(function() {
+    $(window).load(function () {
 
         // TODO transform elements into structured
         var $body = $('body');
-        var $header_inner  = $body.find('.header-inner');
-        var page_loader =  $(".page-loader");
+        var $header_inner = $body.find('.header-inner');
+        var page_loader = $(".page-loader");
         /******** Page loader *******/
         page_loader.find('div').fadeOut();
         page_loader.delay(200).fadeOut("slow");
@@ -24,7 +24,7 @@
             "margin-left": "-" + marginslidebg + "px",
         });
 
-        $(window).resize(function() {
+        $(window).resize(function () {
             // TODO adding debounce functionality
             /******** fractionSlider bg image resize *******/
             slide_bg.css({
@@ -49,7 +49,7 @@
         var $container = $('.portfolio');
         $container.isotope({
             filter: '*',
-            layoutMode:'masonry',
+            layoutMode: 'masonry',
             animationOptions: {
                 duration: 750,
                 easing: 'linear',
@@ -58,7 +58,7 @@
 
         });
 
-        $('.port-filter li a').click(function() {
+        $('.port-filter li a').click(function () {
             $('.port-filter li').removeClass('active');
             $(this).parent().addClass('active');
 
@@ -78,17 +78,17 @@
     });
 
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         /******** Header two menu button *******/
 
-        $("#mobnav-btn").click(function() {
+        $("#mobnav-btn").click(function () {
             $(".sf-menu").toggleClass('open');
             $(this).parents('.header-inner').toggleClass('open');
         });
 
-        $('.mobnav-subarrow').click(function() {
-                $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
+        $('.mobnav-subarrow').click(function () {
+            $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
         });
 
 
@@ -114,6 +114,7 @@
             var minheight = $(window).height();
             $(".full-screen").css({'min-height': minheight, 'height': minheight});
         }
+
         SetResizeContent();
 
 
@@ -121,7 +122,6 @@
 
         // Target your .container, .wrapper, .post, etc.
         $(".fit").fitVids();
-
 
 
         /********  MAGNIFIC POPUP INIT *******/
@@ -133,12 +133,11 @@
             mainClass: 'mfp-with-fade mfp-img-mobile',
             gallery: {
                 enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            },
+                preload: [0, 1],// Will preload 0 - before current, and 1 after the current image,
+              },
             image: {
                 tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                titleSrc: function(item) {
+                titleSrc: function (item) {
                     return item.el.attr('title') + '<small></small>';
                 }
             }
@@ -160,7 +159,6 @@
         }
 
 
-
     });
 
 
@@ -172,7 +170,6 @@
         mobile: false
     });
     wow.init();
-
 
 
 })(jQuery)
