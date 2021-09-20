@@ -742,11 +742,11 @@ span.description {
 .title-un-icon:before {
   position: absolute;
   left: 0;
-  right: 280px;
+  right: 215px;
   margin-left: auto;
   margin-right: auto;
   background: #f1f1f1;
-  width: 200px;
+  width: 125px;
   height: 3px;
   bottom: 16px;
   opacity: 1;
@@ -757,12 +757,12 @@ span.description {
 
 .title-un-icon:after {
   position: absolute;
-  left: 280px;
+  left: 215px;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   background: #f1f1f1;
-  width: 200px;
+  width: 125px;
   height: 3px;
   bottom: 16px;
   opacity: 1;
@@ -996,14 +996,13 @@ span.description {
 
 .service-box-sb .service-img {
   margin-bottom: 20px;
-  border: solid 1px #f1f1f1;
   border-radius: 2px;
   padding: 1px;
 }
 
 .service-box-sb .service-img img {
   border-radius: 1px;
-  height: 355px;
+  width: 100%;
 }
 
 .service-box-sb .service-icon {
@@ -3052,6 +3051,10 @@ input[type="submit"]:focus {
     h1 {
       font-size: 50px
     }
+  }
+  .service-box-sb .service-img img {
+    height: 335px;
+    width: unset;
   }
 }
 

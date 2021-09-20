@@ -6,41 +6,18 @@
         // TODO transform elements into structured
         var $body = $('body');
         var $header_inner = $body.find('.header-inner');
-        var page_loader = $(".page-loader");
+        
+        
         /******** Page loader *******/
+        var page_loader = $(".page-loader");
         page_loader.find('div').fadeOut();
         page_loader.delay(200).fadeOut("slow");
 
-        var slide_bg = $(".slide-bg")
-        var viewportWidth = $(window).width();
-        var colWidth = $(".fraction-slider").width();
 
-        var divideval = 2;
-        var marginslidebg = (viewportWidth - colWidth) / divideval + 2;
-
-        slide_bg.css({
-            "width": viewportWidth,
-            "max-width": viewportWidth,
-            "margin-left": "-" + marginslidebg + "px",
-        });
 
         $(window).resize(function () {
             // TODO adding debounce functionality
-            /******** fractionSlider bg image resize *******/
-            slide_bg.css({
-                "width": viewportWidth,
-                "max-width": viewportWidth,
-                "margin-left": "-" + marginslidebg + "px",
-            });
-
-            /*if($body.width() < 768) {
-                $body.addClass('mobile');
-            }*/
-
             $header_inner.removeClass('open');
-
-            // add mobile check and remove the toggle icon
-
         });
 
 
@@ -90,12 +67,7 @@
         $('.mobnav-subarrow').click(function () {
             $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
         });
-
-
-        /******** Header on scroll *******/
-
-            // Hide Header on on scroll down
-        var header_inner = $('.header-inner');
+        
 
         /******** OWL Slider *******/
 
@@ -110,20 +82,13 @@
         });
 
 
-        function SetResizeContent() {
-            var minheight = $(window).height();
-            $(".full-screen").css({'min-height': minheight, 'height': minheight});
+/*        function SetResizeContent() {
+            var min_height = $(window).height();
+            $(".full-screen").css({'min-height': min_height, 'height': min_height});
         }
 
         SetResizeContent();
-
-
-        /********  FitVids.js *******/
-
-        // Target your .container, .wrapper, .post, etc.
-        $(".fit").fitVids();
-
-
+        */
         /********  MAGNIFIC POPUP INIT *******/
 
         $('.popup-gallery').magnificPopup({
