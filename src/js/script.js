@@ -127,7 +127,7 @@
         /********  MAGNIFIC POPUP INIT *******/
 
         $('.popup-gallery').magnificPopup({
-            delegate: 'a',
+            delegate: 'a.image-popup-btn',
             type: 'image',
             tLoading: 'Loading image #%curr%...',
             mainClass: 'mfp-with-fade mfp-img-mobile',
@@ -139,7 +139,7 @@
             image: {
                 tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
                 titleSrc: function(item) {
-                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                    return item.el.attr('title') + '<small></small>';
                 }
             }
         });
