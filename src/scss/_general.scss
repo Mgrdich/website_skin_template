@@ -362,7 +362,7 @@ a:focus {
       display: flex;
 
       .main-nav {
-        text-align: center;
+        text-align: left;
       }
     }
   }
@@ -445,7 +445,7 @@ body.overflow-hidden-header-three {
 /*** Brand logo ***/
 
 .brand {
-  width: 150px;
+  width: 33.333333%;
   max-height: $header_height;
 }
 
@@ -466,9 +466,9 @@ body.overflow-hidden-header-three {
 /*** Main Nav Menu ***/
 
 .main-nav {
-  text-align: right;
   white-space: nowrap;
   padding: 0 0 0 30px;
+  width: 66.6666666%;
 }
 
 .sf-menu,
@@ -493,7 +493,7 @@ body.overflow-hidden-header-three {
 }
 
 .main-nav .sf-menu li a {
-  padding: 28px 24px;
+  padding: 14px 24px;
   display: block;
   position: relative;
   font-size: 18px;
@@ -628,6 +628,7 @@ body.overflow-hidden-header-three {
       justify-content: end;
       .sf-menu {
         flex-direction: row;
+        justify-content: end;
       }
     }
   }
