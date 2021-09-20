@@ -350,10 +350,24 @@ a:focus {
   background-color: $header_color;
   top: 0;
   height: $header_height;
-  &.mobile {
+
+  .header-table {
+    display: none;
+  }
+
+  &.open {
     height: unset;
+
+    .header-table {
+      display: flex;
+
+      .main-nav {
+        text-align: center;
+      }
+    }
   }
 }
+
 
 .header-inner.header-scroll-up {
   -webkit-backface-visibility: hidden;
@@ -431,7 +445,7 @@ body.overflow-hidden-header-three {
 /*** Brand logo ***/
 
 .brand {
-  width: 200px;
+  width: 150px;
   max-height: $header_height;
 }
 
@@ -599,8 +613,23 @@ body.overflow-hidden-header-three {
 }
 
 @media (min-width: 768px) {
-  .header-inner #mobnav-btn {
-    display: none;
+  .header-inner {
+    .container {
+      height: 100%;
+    }
+    #mobnav-btn {
+      display: none;
+    }
+
+    .header-table {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: end;
+      .sf-menu {
+        flex-direction: row;
+      }
+    }
   }
 }
 
@@ -811,7 +840,6 @@ span.description {
   background-repeat: no-repeat;
   background-position: center bottom -2px;
 }
-
 
 
 .plbottom-line {
@@ -3025,6 +3053,7 @@ input[type="submit"]:focus {
     }
   }
 }
+
 .gallery_page {
   #gallery {
     margin-top: $header_height;

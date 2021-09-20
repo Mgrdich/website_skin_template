@@ -1,10 +1,11 @@
-// TODO check this as well
 (function($) {
     "use strict"; // Start of use strict
 
     $(window).load(function() {
 
+        // TODO transform elements into structured
         var $body = $('body');
+        var $header_inner  = $body.find('.header-inner');
         var page_loader =  $(".page-loader");
         /******** Page loader *******/
         page_loader.find('div').fadeOut();
@@ -32,10 +33,11 @@
                 "margin-left": "-" + marginslidebg + "px",
             });
 
-            if($body.width() < 768) {
+            /*if($body.width() < 768) {
                 $body.addClass('mobile');
-            }
+            }*/
 
+            $header_inner.removeClass('open');
 
             // add mobile check and remove the toggle icon
 
@@ -44,7 +46,7 @@
 
         /******** Isotope Portfolio *******/
             // Isotope Portfolio
-        var $container = jQuery('.portfolio');
+        var $container = $('.portfolio');
         $container.isotope({
             filter: '*',
             layoutMode:'masonry',
@@ -55,9 +57,10 @@
             },
 
         });
-        jQuery('.port-filter li a').click(function() {
-            jQuery('.port-filter li').removeClass('active');
-            jQuery(this).parent().addClass('active');
+
+        $('.port-filter li a').click(function() {
+            $('.port-filter li').removeClass('active');
+            $(this).parent().addClass('active');
 
             var selector = jQuery(this).attr('data-filter');
             $container.isotope({
@@ -81,7 +84,7 @@
 
         $("#mobnav-btn").click(function() {
             $(".sf-menu").toggleClass('open');
-            $(this).parents('.header-inner').addClass('mobile');
+            $(this).parents('.header-inner').toggleClass('open');
         });
 
         $('.mobnav-subarrow').click(function() {
