@@ -357,12 +357,23 @@ a:focus {
 
   &.open {
     height: unset;
+    .brand {
+      display: none;
+    }
 
     .header-table {
       display: flex;
+      justify-content: center;
 
       .main-nav {
         text-align: left;
+      }
+    }
+
+    #mobnav-btn {
+      border-color: $secondary_color;
+      &:before {
+        background-color: $secondary_color;
       }
     }
   }
@@ -445,7 +456,7 @@ body.overflow-hidden-header-three {
 /*** Brand logo ***/
 
 .brand {
-  width: 33.333333%;
+  max-width: 200px;
   max-height: $header_height;
 }
 
@@ -468,7 +479,6 @@ body.overflow-hidden-header-three {
 .main-nav {
   white-space: nowrap;
   padding: 0 0 0 30px;
-  width: 66.6666666%;
 }
 
 .sf-menu,
