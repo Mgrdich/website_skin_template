@@ -62,8 +62,7 @@ function jsLibs() {
         "wow.js",
         "jquery.isotope.min.js",
         "owl.carousel.min.js",
-        "jquery.magnific-popup.js",
-        "jquery.fractionslider.min.js"
+        "jquery.magnific-popup.js"
     ];
 
     let dir = "./libs/js/";

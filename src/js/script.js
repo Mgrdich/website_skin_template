@@ -82,13 +82,7 @@
         });
 
 
-/*        function SetResizeContent() {
-            var min_height = $(window).height();
-            $(".full-screen").css({'min-height': min_height, 'height': min_height});
-        }
 
-        SetResizeContent();
-        */
         /********  MAGNIFIC POPUP INIT *******/
 
         $('.popup-gallery').magnificPopup({
