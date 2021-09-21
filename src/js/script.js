@@ -1,29 +1,23 @@
 (function ($) {
     "use strict"; // Start of use strict
+    var $body = $('body');
+    var $header_inner = $body.find('.header-inner');
 
     $(window).load(function () {
-
-        // TODO transform elements into structured
-        var $body = $('body');
-        var $header_inner = $body.find('.header-inner');
-        
-        
         /******** Page loader *******/
         var page_loader = $(".page-loader");
         page_loader.find('div').fadeOut();
         page_loader.delay(200).fadeOut("slow");
-
-
 
         $(window).resize(function () {
             // TODO adding debounce functionality
             $header_inner.removeClass('open');
         });
 
-
         /******** Isotope Portfolio *******/
             // Isotope Portfolio
-        var $container = $('.portfolio');
+        var gallery_container = $('.gallery-portfolio-container');
+        var $container = gallery_container.find('.portfolio');
         $container.isotope({
             filter: '*',
             layoutMode: 'masonry',
@@ -35,7 +29,7 @@
 
         });
 
-        $('.port-filter li a').click(function () {
+        gallery_container.find('.port-filter li a').click(function () {
             $('.port-filter li').removeClass('active');
             $(this).parent().addClass('active');
 
@@ -51,20 +45,20 @@
             return false;
         });
         $container.isotope('layout');
-
     });
 
 
     $(document).ready(function () {
 
         /******** Header two menu button *******/
+        var sf_menu = $header_inner.find(".sf-menu");
 
-        $("#mobnav-btn").click(function () {
-            $(".sf-menu").toggleClass('open');
-            $(this).parents('.header-inner').toggleClass('open');
+        $header_inner.find("#mobnav-btn").click(function () {
+            sf_menu.toggleClass('open');
+            $header_inner.toggleClass('open');
         });
 
-        $('.mobnav-subarrow').click(function () {
+        $header_inner.find('.mobnav-subarrow').click(function () {
             $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
         });
         
