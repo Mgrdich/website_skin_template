@@ -1,22 +1,22 @@
 (function ($) {
     "use strict"; // Start of use strict
     var $body = $('body');
-    var $header_inner = $body.find('.header-inner');
+    var inner_container = $body.find('.inner-container');
+    var $header_inner = inner_container.find('.header-inner');
 
     $(window).load(function () {
         /******** Page loader *******/
-        var page_loader = $(".page-loader");
+        var page_loader = $body.find(".page-loader");
         page_loader.find('div').fadeOut();
         page_loader.delay(200).fadeOut("slow");
 
         $(window).resize(function () {
-            // TODO adding debounce functionality
             $header_inner.removeClass('open');
         });
 
         /******** Isotope Portfolio *******/
             // Isotope Portfolio
-        var gallery_container = $('.gallery-portfolio-container');
+        var gallery_container = inner_container.find('.gallery-portfolio-container');
         var $container = gallery_container.find('.portfolio');
         $container.isotope({
             filter: '*',
@@ -50,36 +50,9 @@
 
     $(document).ready(function () {
 
-        /******** Header two menu button *******/
-        var sf_menu = $header_inner.find(".sf-menu");
-
-        $header_inner.find("#mobnav-btn").click(function () {
-            sf_menu.toggleClass('open');
-            $header_inner.toggleClass('open');
-        });
-
-        $header_inner.find('.mobnav-subarrow').click(function () {
-            $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
-        });
-        
-
-        /******** OWL Slider *******/
-
-        $("#owl-slide").owlCarousel({
-            autoPlay: 3000,
-            stopOnHover: true,
-            navigation: false,
-            paginationSpeed: 1000,
-            goToFirstSpeed: 2000,
-            singleItem: true,
-            autoHeight: true,
-        });
-
-
-
         /********  MAGNIFIC POPUP INIT *******/
 
-        $('.popup-gallery').magnificPopup({
+        inner_container.find('.popup-gallery').magnificPopup({
             delegate: 'a.image-popup-btn',
             type: 'image',
             tLoading: 'Loading image #%curr%...',
@@ -98,7 +71,7 @@
 
 
         /********  Video *******/
-        var play_video_trigger = $('.video-play-trigger');
+        var play_video_trigger = inner_container.find('.video-play-trigger');
         // For video popup (PLAY VIDEO TRIGGER)
         if (play_video_trigger.length) {
             play_video_trigger.magnificPopup({
@@ -110,10 +83,32 @@
                 fixedContentPos: false
             });
         }
-
-
     });
 
+    /******** OWL Slider *******/
+
+    inner_container.find("#owl-slide").owlCarousel({
+        autoPlay: 3000,
+        stopOnHover: true,
+        navigation: false,
+        paginationSpeed: 1000,
+        goToFirstSpeed: 2000,
+        singleItem: true,
+        autoHeight: true,
+    });
+
+
+    /******** Header two menu button *******/
+    var sf_menu = $header_inner.find(".sf-menu");
+
+    $header_inner.find("#mobnav-btn").click(function () {
+        sf_menu.toggleClass('open');
+        $header_inner.toggleClass('open');
+    });
+
+    $header_inner.find('.mobnav-subarrow').click(function () {
+        $(this).siblings(".sub-menu").toggleClass("sub-menu-open");
+    });
 
     /********  wow.js *******/
     var wow = new WOW({
