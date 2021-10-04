@@ -12,10 +12,6 @@ const readFileAsync = promisify(fs.readFile)
 
 const sass = gulpSass(dartSass);
 
-async function asyncAwaitTask() {
-    return await readFileAsync('./libs/js/libs_order.json');
-}
-
 
 /**
  * @description compile scss into css
@@ -54,16 +50,9 @@ function js() {
  * 1. where is my libs
  * 2. compile them into a single file
  * */
-function jsLibs() {
-    let libs = [
-        "jquery.min.js",
-        "bootstrap.min.js",
-        "jquery.easing.js",
-        "wow.js",
-        "jquery.isotope.min.js",
-        "owl.carousel.min.js",
-        "jquery.magnific-popup.js"
-    ];
+async function jsLibs() {
+    let bufferFiles = await  readFileAsync('./libs/js/libs_order.json');
+    let libs = JSON.parse(bufferFiles)
 
     let dir = "./libs/js/";
 
