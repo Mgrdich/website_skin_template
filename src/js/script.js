@@ -1,8 +1,10 @@
 (function ($) {
     "use strict"; // Start of use strict
     var $body = $('body');
+    var $body_html = $('body,html');
     var inner_container = $body.find('.inner-container');
     var $header_inner = inner_container.find('.header-inner');
+    var header_height = $header_inner.outerHeight();
 
     $(window).load(function () {
         /******** Page loader *******/
@@ -45,6 +47,15 @@
             return false;
         });
         $container.isotope('layout');
+
+
+        /******** Animate Header *******/
+        $header_inner.find('.animate-scroll').click(function (evt){
+            evt.preventDefault();
+            $body_html.animate({
+                scrollTop: inner_container.find($(this).attr('href')).offset().top - header_height
+            }, 1500);
+        });
     });
 
 
